@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistem Informasi Manajemen Inventori</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+</head>
+<body class="hold-transition dark-mode sidebar-mini ">
+<div class="wrapper">
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">SIMBAKI</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">ADMINISTRATOR</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="homepage.html" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="barangmasuk.html" class="nav-link active">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Barang Masuk
+                <!-- <span class="right badge badge-danger">New</span> -->
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Barang Keluar
+                <!-- <span class="right badge badge-danger">New</span> -->
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Stok Barang
+                <!-- <span class="right badge badge-danger">New</span> -->
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tree"></i>
+              <p>
+                Rekap Laporan
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/UI/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Stock Opname</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/UI/icons.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data Miss</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/UI/buttons.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Laporan Detail Project</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/UI/sliders.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Total Barang Keluar</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Barang Masuk</h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="homepage.html">Dashboard</a></li>
+                <li class="breadcrumb-item active">Barang Masuk</li>
+              </ol>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="float-right">
+            <a class="btn btn-app">
+                <i class="fas fa-plus"></i> Add
+            </a><br>
+            <a class="btn btn-app">
+                <i class="fas fa-edit"></i> edit
+            </a><br>
+            <a class="btn btn-app">
+                <i class="fas fa-save"></i> save
+            </a>
+        </div>
+        <!-- Default box -->
+        <div class="card">
+          <div class="card-body p-0">
+            <table class="table table-striped projects">
+                <thead>
+                    <tr>
+                        <th style="width: 1%">
+                            #
+                        </th>
+                        <th style="width: 5%">
+                            Kode
+                        </th>
+                        <th style="width: 10%">
+                            Tanggal
+                        </th>
+                        <th>
+                            Nama Barang
+                        </th>
+                        <th style="width: 5%">
+                            QTY
+                        </th>
+                        <th style="width: 10%">
+                            Satuan
+                        </th>
+                        <th style="width: 10%">
+                            Harga
+                        </th>
+                        <th style="width: 10%">
+                            Jumlah
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            #
+                        </td>
+                        <td>
+                            <a>
+                                PVC34
+                            </a>
+                        </td>
+                        <td>
+                            01.01.2019
+                        </td>
+                        <td>
+                            Pipa PVC
+                        </td>
+                        <td>
+                            10
+                        </td>
+                        <td>
+                            Buah
+                        </td>
+                        <td>
+                            Rp5.000
+                        </td>
+                        <td>
+                            Rp50.000
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            #
+                        </td>
+                        <td>
+                            <a>
+                                PVC34
+                            </a>
+                        </td>
+                        <td>
+                            01.01.2019
+                        </td>
+                        <td>
+                            Pipa PVC
+                        </td>
+                        <td>
+                            10
+                        </td>
+                        <td>
+                            Buah
+                        </td>
+                        <td>
+                            Rp5.000
+                        </td>
+                        <td>
+                            Rp50.000
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            #
+                        </td>
+                        <td>
+                            <a>
+                                PVC34
+                            </a>
+                        </td>
+                        <td>
+                            01.01.2019
+                        </td>
+                        <td>
+                            Pipa PVC
+                        </td>
+                        <td>
+                            10
+                        </td>
+                        <td>
+                            Buah
+                        </td>
+                        <td>
+                            Rp5.000
+                        </td>
+                        <td>
+                            Rp50.000
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            #
+                        </td>
+                        <td>
+                            <a>
+                                PVC34
+                            </a>
+                        </td>
+                        <td>
+                            01.01.2019
+                        </td>
+                        <td>
+                            Pipa PVC
+                        </td>
+                        <td>
+                            10
+                        </td>
+                        <td>
+                            Buah
+                        </td>
+                        <td>
+                            Rp5.000
+                        </td>
+                        <td>
+                            Rp50.000
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            #
+                        </td>
+                        <td>
+                            <a>
+                                PVC34
+                            </a>
+                        </td>
+                        <td>
+                            01.01.2019
+                        </td>
+                        <td>
+                            Pipa PVC
+                        </td>
+                        <td>
+                            10
+                        </td>
+                        <td>
+                            Buah
+                        </td>
+                        <td>
+                            Rp5.000
+                        </td>
+                        <td>
+                            Rp50.000
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+  
+      </section>
+      <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="float-right d-none d-sm-inline">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+
+<!-- OPTIONAL SCRIPTS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard3.js"></script>
+</body>
+</html>
